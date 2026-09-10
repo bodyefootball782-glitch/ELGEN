@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0a0a0d">
+  <title>ABDO / ELGEN — Streamer</title>
+  <meta name="description" content="ABDO / ELGEN — Streamer, gamer and content creator.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="page-bg"></div>
+  <div class="noise"></div>
+
+  <header class="topbar">
+    <a class="brand" href="#home" aria-label="ABDO / ELGEN home">
+      <img id="logo" src="assets/logo.png" alt="Logo" onerror="this.style.display='none'">
+      <span>𝑨𝑩𝑫𝑶<span class="slash">/</span>𝑬𝑳𝑮𝑬𝑵</span>
+    </a>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#socials">Socials</a>
+      <a href="#clips">Clips</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#mods">Mods</a>
+    </nav>
+    <a class="nav-cta" href="#socials">Follow</a>
+  </header>
+
+  <main id="home">
+    <section class="hero section">
+      <div class="hero-copy reveal">
+        <div class="eyebrow"><span class="live-dot"></span> STREAMER • GAMER • CREATOR</div>
+        <h1>𝑨𝑩𝑫𝑶<span>/</span>𝑬𝑳𝑮𝑬𝑵</h1>
+        <p>Gaming, streams, clips and everything from my world — all in one place.</p>
+        <div class="hero-actions">
+          <a class="btn primary" href="#socials">Follow Me <span>↗</span></a>
+          <a class="btn ghost" href="#clips">Watch Clips <span>▶</span></a>
+        </div>
+        <div class="mini-stats">
+          <div><strong id="platformCount">4</strong><span>Platforms</span></div>
+          <div><strong id="clipCount">0</strong><span>Clips</span></div>
+          <div><strong id="modCount">0</strong><span>Mods</span></div>
+        </div>
+      </div>
+      <div class="hero-card reveal">
+        <div class="hero-card-inner">
+          <span class="card-label">CURRENTLY</span>
+          <strong>CREATING<br><em>MEMORIES.</em></strong>
+          <div class="card-line"></div>
+          <span class="card-small">Stay connected. New content always loading.</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="socials" class="section">
+      <div class="section-head reveal">
+        <div><span class="eyebrow">CONNECT</span><h2>Find me <span>everywhere.</span></h2></div>
+        <p>Follow the journey across my platforms.</p>
+      </div>
+      <div id="socialGrid" class="social-grid"></div>
+    </section>
+
+    <section id="clips" class="section">
+      <div class="section-head reveal">
+        <div><span class="eyebrow">LATEST</span><h2>Clips <span>& highlights.</span></h2></div>
+        <p>Drop new clips into <code>assets/clips/</code> and add them in config.js.</p>
+      </div>
+      <div id="clipGrid" class="clip-grid"></div>
+    </section>
+
+    <section id="gallery" class="section">
+      <div class="section-head reveal">
+        <div><span class="eyebrow">MOMENTS</span><h2>My <span>gallery.</span></h2></div>
+        <p>Five slots, auto-hidden when an image isn't uploaded.</p>
+      </div>
+      <div id="galleryGrid" class="gallery-grid"></div>
+    </section>
+
+    <section id="mods" class="section mods-section">
+      <div class="section-head reveal">
+        <div><span class="eyebrow">THE TEAM</span><h2>My <span>mods.</span></h2></div>
+        <p>The people behind the community.</p>
+      </div>
+      <div id="modsGrid" class="mods-grid"></div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-brand">𝑨𝑩𝑫𝑶<span>/</span>𝑬𝑳𝑮𝑬𝑵</div>
+    <span>© <span id="year"></span> All rights reserved.</span>
+    <a href="#home">Back to top ↑</a>
+  </footer>
+
+  <div class="music-player" id="musicPlayer">
+    <button id="musicToggle" class="music-btn" aria-label="Play music">▶</button>
+    <div class="track-info">
+      <small>NOW PLAYING</small>
+      <strong id="trackTitle">No song loaded</strong>
+    </div>
+    <button id="playlistToggle" class="playlist-btn" aria-label="Open playlist">☰</button>
+    <div id="playlist" class="playlist"></div>
+    <audio id="audio" preload="metadata"></audio>
+  </div>
+
+  <script src="config.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
